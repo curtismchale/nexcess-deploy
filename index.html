@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Site Ready</title>
+  <style>
+    @import url("https://fonts.googleapis.com/css?family=Kanit:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i");
+
+    body {
+      font-family: "Kanit", Helvetica, Arial, sans-serif;
+      font-weight: 300;
+      overflow: auto;
+      background: #F8F8FA;
+      margin: 0;
+      color: #676a67;
+      text-align: center;
+    }
+
+    .content {
+      padding: 25px;
+      text-align: center;
+    }
+
+    a {
+      color: #02B6F1;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    h2 {
+      font-weight: 300;
+    }
+
+    h4 {
+      font-weight: 300;
+    }
+
+    img {
+      height: 100px;
+      margin-bottom: 20px;
+    }
+
+    .logo {
+      margin: 160px 0 0 0;
+      display: inline-block;  
+    }
+
+    #content-banner {
+      color: #fff;
+      background: #fff;
+     height: 300px;
+      position: relative;
+      overflow: auto;
+      background-size: cover;
+      background-position: bottom 100% center;
+    }
+
+
+    .logo img {
+      -webkit-mask-image: linear-gradient( -75deg,
+      #000 30%,
+      rgba(0, 0, 0, 0.3) 50%,
+      #000 70%);
+      -webkit-mask-size: 200%;
+      animation: shine 5s infinite;
+    }
+
+    @-webkit-keyframes shine {
+      from {
+        -webkit-mask-position: 150%;
+      }
+      to {
+        -webkit-mask-position: -50%;
+      }
+    }
+
+    #content-wrap {
+      padding: 5px 0;
+    }
+    #more-info{
+      display:flex;
+      justify-content: center; 
+      padding:15px;
+      background:rgba(0,0,0,0.1);
+    }
+    .more-btns {  
+      flex:1;
+      max-width:150px;
+      margin:0 5px;
+      position: relative;
+      padding: 17px;
+      font-size: 1em;
+      line-height: 1em;
+      border-radius: 10px;
+      background-color: #eee;
+      background: rgba(255, 255, 255, 0.7);
+      box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+      text-decoration: none !important;
+    }
+    .more-btns:hover{
+      background:#02B6F1;
+      color:#fff;;
+    }
+    .more-btns:active {  
+      box-shadow: inset 0 3px 3px rgba(0, 0, 0, 0.3);
+    }
+
+    @media only screen and (max-width: 800px) {
+      #content-banner {
+        height: 300px;
+      }
+      .logo {
+        margin: 100px 0 0 0;
+      }
+    }
+
+    @media only screen and (max-width: 600px) {
+      #content-banner {
+        height: 200px;
+      }
+      .logo {
+        margin: 50px 0 0 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div id="content-banner">
+    <a class="logo" href="https://www.nexcess.net/">
+      <img src="https://static.nexcess.net/websites/nocworx/img/nexcess/logo-nex-lw.svg" alt="Liquid Web + Nexcess">
+    </a>
+
+  </div>
+  <div id="content-wrap">
+    <div class="content">
+      <h2>Welcome, your plan is up &amp; running, your next steps can begin.</h2>
+      <h4>This is the default test page for
+        your site, login to the portal to continue setting up your site!</h4>
+    </div>
+    <div id="more-info">
+        <a class="more-btns" href ="Https://portal.nexcess.net" target="_blank">Portal</a>
+        <a class="more-btns" href ="https://docs.nexcess.net/" target="_blank">Knowledge Library</a>
+        <a class="more-btns" href ="https://www.nexcess.net/support/" target="_blank">Support</a>
+    </div>
+  </div>
+
+  
+</body>
+
+</html>
