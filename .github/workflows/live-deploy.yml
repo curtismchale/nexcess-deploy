@@ -25,10 +25,10 @@ jobs:
 
     # Setting up SSH
     - name: Setup SSH agent
-        uses: webfactory/ssh-agent@v0.4.0
-        with:
-          ssh-private-key: ${{ secrets.DEPLOY_SSH_KEY }}
-      - name: Setup known_hosts
-        run: echo '${{ secrets.NEXCESS_HOST }}' >> ~/.ssh/known_hosts
-      - name: Sync project files
-        run: rsync -avzr --delete ${GITHUB_WORKSPACE}/ ad3cf561_1@fa4280a4b9.nxcli.net:~/nexcess.sfndesign.ca
+      uses: webfactory/ssh-agent@v0.4.0
+      with:
+        ssh-private-key: ${{ secrets.DEPLOY_SSH_KEY }}
+    - name: Setup known_hosts
+      run: echo '${{ secrets.NEXCESS_HOST }}' >> ~/.ssh/known_hosts
+    - name: Sync project files
+      run: rsync -avzr --delete ${GITHUB_WORKSPACE}/ ad3cf561_1@fa4280a4b9.nxcli.net:~/nexcess.sfndesign.ca
