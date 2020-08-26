@@ -31,4 +31,4 @@ jobs:
     - name: Setup known_hosts
       run: echo '${{ secrets.NEXCESS_HOST }}' >> ~/.ssh/known_hosts
     - name: Sync project files
-      run: rsync -uvzr --exclude 'wp-config.php' --exclude '.gitignore' --exclude '.git/*' --exclude 'wp-content/uploads/*' --exclude '.htaccess' --exclude 'wp-content/cache/*' --exclude 'wp-content/advanced-cache.php' --exclude 'wp-content/object-cache.php' --exclude 'wp-content/mu-plugins/*' ${GITHUB_WORKSPACE}/ ${{ secrets.NEXCESS_LOCATION }}
+      run: rsync -uvzr --backup --backup-dir="deploy-backup" --exclude 'wp-config.php' --exclude '.gitignore' --exclude '.git/*' --exclude 'wp-content/uploads/*' --exclude '.htaccess' --exclude 'wp-content/cache/*' --exclude 'wp-content/advanced-cache.php' --exclude 'wp-content/object-cache.php' --exclude 'wp-content/mu-plugins/*' ${GITHUB_WORKSPACE}/ ${{ secrets.NEXCESS_LOCATION }}
